@@ -8,9 +8,7 @@ Name: Basic
 Date: 2017-02-27
 Description: Simple
 Author: Melissa-Grace
-
 #############################################################*/
-
 /* standard elements */
 * {
 	margin: 0;
@@ -62,12 +60,10 @@ h1,h2,h3 {
 	color: #367EA6;
 	padding-top: 6px;
 }
-
 /* misc */
 .clearer {
 	clear: both;
 }
-
 /* structure */
 .container {
 	background: url(img/bgcontainer.gif) repeat-y;
@@ -78,7 +74,6 @@ h1,h2,h3 {
 .header {
 	background: url(img/header.gif) repeat-x;
 }
-
 /* title */
 .title h1 {
 	color: #FFF;
@@ -88,7 +83,6 @@ h1,h2,h3 {
 	margin-bottom: 8px;
 	text-align: left;
 }
-
 /* navigation */
 .navigation {
 	margin-bottom: 4px;
@@ -108,13 +102,11 @@ h1,h2,h3 {
 	background-color: #000;
 	color: #FFF;
 }
-
 /* main */
 .main {
 	clear: both;
 	padding: 8px 18px;
 }
-
 /* main left */
 .sidenav h1,.sidenav ul {
 	padding-left: 12px;
@@ -153,7 +145,6 @@ h1,h2,h3 {
 .sidenav li a:hover {
 	color: #111;
 }
-
 /* content */
 .content {
 	float: right;
@@ -173,7 +164,6 @@ h1,h2,h3 {
 	list-style: url(img/li.gif);
 	margin-left: 18px;
 }
-
 /* search form */
 form {
 	padding: 0 0 6px 8px;
@@ -188,7 +178,6 @@ form {
 	height: 27px;
 	width: 27px;
 }
-
 /* footer */
 .footer {
 	background: #FFF;
@@ -208,6 +197,43 @@ form {
 	color: #06F;
 	text-decoration: underline;
 }
+/*Read More Button*/
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: 1.1em;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+/*end of css code*/
     </style>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
 <meta name="description" content="description"/>
@@ -228,7 +254,7 @@ form {
 			<div class="title">
 				<h1>Melissa-Grace Soriano</h1>
 				<br>
-                                <h3>&nbsp;Undergrad - Writer - Foodie </h3>
+                                <h3>&nbsp; Undergrad - Writer - Foodie </h3>
 			</div>
 
 		</div>
@@ -239,53 +265,49 @@ form {
 
 				<h1>This is my first blog post.</h1>
 				<div class="descr">February 27, 2017</div>
+<div>
+  <input type="checkbox" class="read-more-state" id="post-2" />
 
+  <ul class="read-more-wrap"> <!-- Read more button code starts here -->
 				<cite>For I am persuaded that neither that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, 
 					nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, 
 					which is in Christ Jesus our Lord.
 					<br>-- Romans 8:38-39
-				</cite>
-				
-				<p>Today, I start working on the details of my website. I claim this verse in light of everything that has happened to me thus far.
-					Time and time again, I am shown that I am not alone in any of my endeavors.</p>
+				</cite> 
+<p class="read-more-target"> <!-- Hidden Text under "Read More" button -->				
+				Today, I start working on the details of my website. I claim this verse in light of everything that has happened to me thus far.
+					Time and time again, I am shown that I am not alone in any of my endeavors.
 
-				<p>So, hopefully, this will be yet another successful endeavor in my pursuit of wellness and successes in my career.
-				</p>
+				<br><br>So, hopefully, this will be yet another successful endeavor in my pursuit of wellness and successes in my career.
+	  </p></ul>
+  
+  <label for="post-2" class="read-more-trigger"></label>
+</div> <!-- end of Read more code -->
+
 
 			</div>
 			<!--
 			<div class="item">
-
 				<h1>Adipiscing</h1>
 				<div class="descr">Jun 11, 2006 by Laoreet</div>
-
 				<p>Aliquam risus justo, mollis in, laoreet a, consectetuer nec, risus. Nunc blandit sodales lacus. Nam luctus semper mi. In eu diam. Phasellus rutrum elit vel nisi. Cras mauris nulla, egestas quis, cursus at, venenatis ac, ante. Fusce accumsan enim et arcu. Duis sagittis libero at lacus. Suspendisse lacinia nulla eget urna.</p>
-
 				<ul>
 					<li>Tristique</li>
 					<li>Aenean</li>
 					<li>Pretium</li>
 				</ul>
-
 				<p>In hac habitasse platea dictumst. Duis porttitor. Sed vulputate elementum nisl. Vivamus et mi at arcu mattis iaculis. Nullam posuere tristique tortor. In bibendum. Aenean ornare, nunc eget pretium porttitor, sem est pretium leo, non euismod nulla dui non diam. Pellentesque dictum faucibus leo. Vestibulum ac ante. Sed in est. Sed sodales nisl sit amet augue. Donec ultrices, augue ullamcorper posuere laoreet, turpis massa tristique justo, sed egestas metus magna sed purus. Fusce eleifend, dui ut posuere auctor, justo elit posuere sapien, at blandit enim quam fringilla mi.</p>
-
 			</div>
-
 			<div class="item">
-
 				<h1>Interdum</h1>
 				<div class="descr">May 24, 2006 by Lectus</div>
-
 				<p>Praesent nisi sem, bibendum in, ultrices sit amet, euismod sit amet, dui. Donec varius tincidunt nisi. Ut ut sapien. Integer porta. Fusce nibh. Curabitur pellentesque, lectus at <a href="index.html">volutpat interdum</a>, sem justo placerat elit, eget feugiat est leo tempor quam. Ut quis neque convallis magna consequat molestie. Nullam semper massa eget ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a nibh quis nunc volutpat aliquam</p>
-
 				<code>margin-bottom: 12px;
 	font: normal 1.1em "Lucida Sans Unicode",serif;
 	background: url(img/quote.gif) no-repeat;
 	padding-left: 28px;
 	color: #555;</code>
-
 				<p>Eget feugiat est leo tempor quam. Ut quis neque convallis magna consequat molestie.</p>
-
 			</div>
 			-->
 		</div> 
