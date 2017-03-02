@@ -21,7 +21,7 @@ a:hover {
 	color: #06F;
 }
 body {
-	background: #d2c9c5 url(img/bg.gif);
+	background: #ffeaf7 url(img/bg.gif);
 	color: #444;
 	font: normal 62.5% "Lucida Sans Unicode",sans-serif;
 	margin: 0;
@@ -112,7 +112,7 @@ h1,h2,h3 {
 	padding-left: 12px;
 }
 .sidenav {
-	background: #d2c9c5;
+	background: #ffeaf7;
 	border: 1px solid #E5E5E5;
 	float: left;
 	width: 200px;
@@ -201,28 +201,23 @@ form {
 .read-more-state {
   display: none;
 }
-
 .read-more-target {
   opacity: 0;
   max-height: 0;
   font-size: 0;
   transition: .25s ease;
 }
-
 .read-more-state:checked ~ .read-more-wrap .read-more-target {
   opacity: 1;
   font-size: 1.1em;
   max-height: 999em;
 }
-
 .read-more-state ~ .read-more-trigger:before {
   content: 'Show more';
 }
-
 .read-more-state:checked ~ .read-more-trigger:before {
   content: 'Show less';
 }
-
 .read-more-trigger {
   cursor: pointer;
   display: inline-block;
